@@ -1,446 +1,939 @@
 /* =========================================================
-   JustS — Coming Soon
-   ========================================================= */
+JustS
+========================================================= */
 
 :root {
-    --background: #f7f7f5;
-    --text: #111111;
-    --muted: #6f6f6a;
-    --border: #deded9;
-    --accent: #111111;
-    --white: #ffffff;
+--background: #f7f7f5;
+--text: #111111;
+--muted: #6f6f6a;
+--border: #deded9;
+--white: #ffffff;
 
-    --max-width: 1200px;
+
+--max-width: 1200px;
+
+
 }
-
 
 /* =========================================================
-   Reset
-   ========================================================= */
+Reset
+========================================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
+min-height: 100vh;
 
-    background: var(--background);
-    color: var(--text);
 
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+background: var(--background);
+color: var(--text);
 
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+-webkit-font-smoothing: antialiased;
+
+text-rendering: optimizeLegibility;
+
+
 }
 
-
 /* =========================================================
-   Page
-   ========================================================= */
+Page
+========================================================= */
 
 .page {
-    position: relative;
-    z-index: 2;
+position: relative;
+z-index: 2;
 
-    min-height: 100vh;
-    max-width: var(--max-width);
 
-    margin: 0 auto;
+min-height: 100vh;
 
-    padding:
-        0 48px;
+max-width: var(--max-width);
 
-    display: flex;
-    flex-direction: column;
+margin: 0 auto;
+
+padding: 0 48px;
+
+display: flex;
+flex-direction: column;
+
+
 }
 
-
 /* =========================================================
-   Navigation
-   ========================================================= */
+Navigation
+========================================================= */
 
 .navbar {
-    width: 100%;
+width: 100%;
 
-    padding: 32px 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+padding: 32px 0;
 
-    border-bottom: 1px solid var(--border);
+display: flex;
+align-items: center;
+
+border-bottom: 1px solid var(--border);
+
+
 }
 
 .logo {
-    color: var(--text);
+color: var(--text);
 
-    text-decoration: none;
 
-    font-size: 25px;
-    font-weight: 800;
+text-decoration: none;
 
-    letter-spacing: -1.5px;
+font-size: 25px;
+font-weight: 800;
+
+letter-spacing: -1.5px;
+
+
 }
 
 .logo span {
-    margin-left: 1px;
+margin-left: 1px;
 }
 
+.nav-links {
+margin-left: 45px;
 
-/* =========================================================
-   Status
-   ========================================================= */
+
+display: flex;
+align-items: center;
+
+gap: 28px;
+
+
+}
+
+.nav-links a {
+color: var(--muted);
+
+
+text-decoration: none;
+
+font-size: 12px;
+font-weight: 600;
+
+text-transform: uppercase;
+
+letter-spacing: 1px;
+
+transition:
+    color 0.2s ease;
+
+
+}
+
+.nav-links a:hover {
+color: var(--text);
+}
 
 .nav-status {
-    display: flex;
-    align-items: center;
-    gap: 9px;
+margin-left: auto;
 
-    color: var(--muted);
 
-    font-size: 12px;
-    font-weight: 600;
+display: flex;
+align-items: center;
 
-    text-transform: uppercase;
-    letter-spacing: 1px;
+gap: 9px;
+
+color: var(--muted);
+
+font-size: 12px;
+font-weight: 600;
+
+text-transform: uppercase;
+
+letter-spacing: 1px;
+
+
 }
 
 .status-dot {
-    width: 7px;
-    height: 7px;
+width: 7px;
+height: 7px;
 
-    display: inline-block;
 
-    background: #111111;
+display: inline-block;
 
-    border-radius: 50%;
+background: #111111;
 
-    animation: pulse 2s infinite;
+border-radius: 50%;
+
+animation: pulse 2s infinite;
+
+
 }
 
 @keyframes pulse {
-    0% {
-        opacity: 1;
-    }
 
-    50% {
-        opacity: 0.35;
-    }
 
-    100% {
-        opacity: 1;
-    }
+0% {
+    opacity: 1;
+}
+
+50% {
+    opacity: 0.35;
+}
+
+100% {
+    opacity: 1;
 }
 
 
+}
+
 /* =========================================================
-   Hero
-   ========================================================= */
+Hero
+========================================================= */
 
 .hero {
-    flex: 1;
+min-height: 600px;
 
-    display: flex;
-    align-items: center;
 
-    padding: 90px 0 100px;
+display: flex;
+align-items: center;
+
+padding: 90px 0 110px;
+
+
 }
 
 .hero-content {
-    max-width: 850px;
+max-width: 850px;
 }
 
-
 /* =========================================================
-   Eyebrow
-   ========================================================= */
+Eyebrow
+========================================================= */
 
 .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+display: flex;
+align-items: center;
 
-    margin-bottom: 30px;
 
-    color: var(--muted);
+gap: 12px;
 
-    font-size: 12px;
-    font-weight: 600;
+margin-bottom: 30px;
 
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
+color: var(--muted);
+
+font-size: 12px;
+font-weight: 600;
+
+text-transform: uppercase;
+
+letter-spacing: 1.8px;
+
+
 }
 
 .eyebrow span {
-    width: 26px;
-    height: 1px;
+width: 26px;
+height: 1px;
 
-    background: var(--text);
+
+background: var(--text);
+
+
 }
 
-
 /* =========================================================
-   Heading
-   ========================================================= */
+Heading
+========================================================= */
 
 h1 {
-    margin: 0;
+margin: 0;
 
-    font-size: clamp(54px, 7vw, 96px);
 
-    line-height: 0.98;
+font-size: clamp(54px, 7vw, 96px);
 
-    font-weight: 700;
+line-height: 0.98;
 
-    letter-spacing: -5px;
+font-weight: 700;
+
+letter-spacing: -5px;
+
+
 }
 
 h1 em {
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+font-family:
+Georgia,
+"Times New Roman",
+serif;
 
-    font-weight: 400;
 
-    letter-spacing: -5px;
+font-weight: 400;
+
+letter-spacing: -5px;
+
+
 }
 
-
 /* =========================================================
-   Description
-   ========================================================= */
+Description
+========================================================= */
 
 .description {
-    max-width: 590px;
+max-width: 650px;
 
-    margin-top: 38px;
 
-    color: var(--muted);
+margin-top: 38px;
 
-    font-size: 18px;
+color: var(--muted);
 
-    line-height: 1.7;
+font-size: 18px;
 
-    letter-spacing: -0.15px;
+line-height: 1.7;
+
+letter-spacing: -0.15px;
+
+
 }
 
-
 /* =========================================================
-   Divider
-   ========================================================= */
+Hero Button
+========================================================= */
 
-.divider {
-    width: 100%;
-    max-width: 850px;
-
-    height: 1px;
-
-    margin-top: 55px;
-
-    background: var(--border);
+.hero-actions {
+margin-top: 35px;
 }
 
+.primary-button {
+display: inline-flex;
 
-/* =========================================================
-   Launch text
-   ========================================================= */
 
-.launch-text {
-    margin-top: 24px;
+align-items: center;
 
-    color: var(--muted);
+gap: 15px;
 
-    font-size: 13px;
+padding: 13px 18px;
 
-    line-height: 1.8;
+color: var(--white);
 
-    letter-spacing: 0.1px;
+background: var(--text);
+
+border: 1px solid var(--text);
+
+text-decoration: none;
+
+font-size: 12px;
+font-weight: 600;
+
+text-transform: uppercase;
+
+letter-spacing: 1px;
+
+transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+
 }
 
+.primary-button:hover {
+color: var(--text);
+
+
+background: transparent;
+
+
+}
+
+.primary-button span {
+font-size: 16px;
+}
 
 /* =========================================================
-   Footer
-   ========================================================= */
+Content Sections
+========================================================= */
+
+.content-section {
+padding: 85px 0;
+
+
+border-top: 1px solid var(--border);
+
+
+}
+
+.section-heading {
+display: flex;
+align-items: baseline;
+
+
+gap: 20px;
+
+
+}
+
+.section-number {
+color: var(--muted);
+
+
+font-size: 11px;
+font-weight: 600;
+
+letter-spacing: 1px;
+
+
+}
+
+h2 {
+font-size: 32px;
+
+
+line-height: 1.1;
+
+font-weight: 700;
+
+letter-spacing: -1.5px;
+
+
+}
+
+.section-intro {
+max-width: 620px;
+
+
+margin-top: 20px;
+
+color: var(--muted);
+
+font-size: 16px;
+
+line-height: 1.7;
+
+
+}
+
+/* =========================================================
+Tool Card
+========================================================= */
+
+.tool-card {
+margin-top: 38px;
+
+
+padding: 30px;
+
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+gap: 40px;
+
+background: rgba(255, 255, 255, 0.55);
+
+border: 1px solid var(--border);
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.tool-card:hover {
+background: var(--white);
+
+
+border-color: #c9c9c4;
+
+transform: translateY(-2px);
+
+
+}
+
+.tool-card-main {
+max-width: 700px;
+}
+
+.tool-label {
+margin-bottom: 10px;
+
+
+color: var(--muted);
+
+font-size: 10px;
+font-weight: 600;
+
+text-transform: uppercase;
+
+letter-spacing: 1.5px;
+
+
+}
+
+h3 {
+font-size: 28px;
+
+font-weight: 700;
+
+letter-spacing: -1px;
+
+
+}
+
+.tool-card-main p {
+max-width: 650px;
+margin-top: 12px;
+
+color: var(--muted);
+
+font-size: 15px;
+
+line-height: 1.7;
+
+
+}
+
+.tool-features {
+margin-top: 22px;
+
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 9px;
+
+
+}
+
+.tool-features span {
+padding: 6px 9px;
+
+
+color: var(--muted);
+
+background: var(--background);
+
+border: 1px solid var(--border);
+
+font-size: 10px;
+
+text-transform: uppercase;
+
+letter-spacing: 0.8px;
+
+
+}
+
+.tool-button {
+flex-shrink: 0;
+
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 14px;
+
+padding: 12px 15px;
+
+color: var(--text);
+
+border: 1px solid var(--border);
+
+text-decoration: none;
+
+font-size: 12px;
+font-weight: 600;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.tool-button:hover {
+background: var(--background);
+
+
+border-color: #c9c9c4;
+
+
+}
+
+.tool-button span {
+font-size: 18px;
+}
+
+.coming-tools {
+margin-top: 18px;
+
+
+color: var(--muted);
+
+font-size: 12px;
+
+
+}
+
+/* =========================================================
+About
+========================================================= */
+
+.about-content {
+max-width: 720px;
+
+
+margin-top: 30px;
+
+
+}
+
+.about-content p {
+margin-bottom: 20px;
+
+
+color: var(--muted);
+
+font-size: 16px;
+
+line-height: 1.8;
+
+
+}
+
+.about-content p:last-child {
+margin-bottom: 0;
+}
+
+/* =========================================================
+Future
+========================================================= */
+
+.future-content {
+max-width: 720px;
+
+
+margin-top: 30px;
+
+
+}
+
+.future-content p {
+margin-bottom: 20px;
+
+
+color: var(--muted);
+
+font-size: 16px;
+
+line-height: 1.8;
+
+
+}
+
+/* =========================================================
+Footer
+========================================================= */
 
 .footer {
-    padding: 24px 0 30px;
+padding: 26px 0 32px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
 
-    color: var(--muted);
+gap: 20px;
 
-    font-size: 12px;
+color: var(--muted);
 
-    border-top: 1px solid var(--border);
+font-size: 12px;
+
+border-top: 1px solid var(--border);
+
+
+}
+
+.footer-right {
+display: flex;
+
+align-items: center;
+
+gap: 24px;
+
+
 }
 
 .footer-right a {
-    color: var(--muted);
+color: var(--muted);
 
-    text-decoration: none;
 
-    transition:
-        color 0.2s ease;
+text-decoration: none;
+
+transition:
+    color 0.2s ease;
+
+
 }
 
 .footer-right a:hover {
-    color: var(--text);
+color: var(--text);
 }
 
-
 /* =========================================================
-   Background Grid
-   ========================================================= */
+Background Grid
+========================================================= */
 
 .background-grid {
-    position: fixed;
-    z-index: 0;
+position: fixed;
 
-    inset: 0;
 
-    pointer-events: none;
+z-index: 0;
 
-    opacity: 0.35;
+inset: 0;
 
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.035) 1px,
-            transparent 1px
-        );
+pointer-events: none;
 
-    background-size: 80px 80px;
+opacity: 0.35;
 
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            transparent 85%
-        );
+background-image:
+    linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.035) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.035) 1px,
+        transparent 1px
+    );
+
+background-size: 80px 80px;
+
+mask-image:
+    linear-gradient(
+        to bottom,
+        black 0%,
+        transparent 85%
+    );
+
+
 }
 
-
 /* =========================================================
-   Mobile
-   ========================================================= */
+Mobile
+========================================================= */
 
 @media (max-width: 700px) {
 
-    .page {
-        padding: 0 24px;
-    }
 
-    .navbar {
-        padding: 25px 0;
-    }
-
-    .logo {
-        font-size: 23px;
-    }
-
-    .nav-status {
-        font-size: 10px;
-        letter-spacing: 1.2px;
-    }
-
-    .hero {
-        padding: 70px 0 80px;
-    }
-
-    .eyebrow {
-        margin-bottom: 24px;
-
-        font-size: 10px;
-
-        letter-spacing: 1.4px;
-    }
-
-    h1 {
-        font-size: clamp(48px, 14vw, 72px);
-
-        letter-spacing: -3.5px;
-    }
-
-    h1 em {
-        letter-spacing: -3.5px;
-    }
-
-    .description {
-        margin-top: 30px;
-
-        font-size: 16px;
-
-        line-height: 1.65;
-    }
-
-    .divider {
-        margin-top: 42px;
-    }
-
-    .footer {
-        padding-bottom: 24px;
-    }
+.page {
+    padding: 0 24px;
 }
 
 
+.navbar {
+    padding: 25px 0;
+}
+
+
+.logo {
+    font-size: 23px;
+}
+
+
+.nav-links {
+    display: none;
+}
+
+
+.nav-status {
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+}
+
+
+.hero {
+    min-height: auto;
+
+    padding: 70px 0 80px;
+}
+
+
+.eyebrow {
+    margin-bottom: 24px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+}
+
+
+h1 {
+    font-size: clamp(48px, 14vw, 72px);
+
+    letter-spacing: -3.5px;
+}
+
+
+h1 em {
+    letter-spacing: -3.5px;
+}
+
+
+.description {
+    margin-top: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+}
+
+
+.content-section {
+    padding: 65px 0;
+}
+
+
+h2 {
+    font-size: 28px;
+}
+
+
+.tool-card {
+    padding: 22px;
+
+    display: block;
+}
+
+
+.tool-button {
+    margin-top: 25px;
+}
+
+
+.footer {
+    align-items: flex-start;
+}
+
+
+.footer-right {
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+}
+
+
+}
+
 /* =========================================================
-   Very Small Screens
-   ========================================================= */
+Very Small Screens
+========================================================= */
 
 @media (max-width: 400px) {
 
-    .page {
-        padding: 0 20px;
-    }
 
-    .nav-status {
-        display: none;
-    }
-
-    h1 {
-        font-size: 48px;
-    }
-
-    .description {
-        font-size: 15px;
-    }
+.page {
+    padding: 0 20px;
 }
 
 
+.nav-status {
+    display: none;
+}
+
+
+h1 {
+    font-size: 48px;
+}
+
+
+.description {
+    font-size: 15px;
+}
+
+
+.section-heading {
+    gap: 14px;
+}
+
+
+.section-number {
+    font-size: 10px;
+}
+
+
+h2 {
+    font-size: 25px;
+}
+
+
+.tool-card {
+    padding: 20px;
+}
+
+
+.tool-card-main p {
+    font-size: 14px;
+}
+
+
+.footer {
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.footer-right {
+    justify-content: flex-start;
+}
+
+
+}
+
 /* =========================================================
-   Reduced Motion
-   ========================================================= */
+Reduced Motion
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    html {
-        scroll-behavior: auto;
-    }
 
-    .status-dot {
-        animation: none;
-    }
+html {
+    scroll-behavior: auto;
+}
+
+
+.status-dot {
+    animation: none;
+}
+
+
+.tool-card,
+.primary-button,
+.tool-button {
+    transition: none;
+}
+
+
 }
